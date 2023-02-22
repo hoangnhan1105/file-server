@@ -255,9 +255,11 @@ void Program::receiveMsg(User* user)
 		switch (flag)
 		{
 		case RcvMsgFlag::REGISTER:
+			// Because `msg` is meaningless in this case, we ignore it.
 			this->verifyUserRegister(user);
 			break;
 		case RcvMsgFlag::LOGIN:
+			// Because `msg` is meaningless in this case, we ignore it.
 			this->verifyUserLogin(user);
 			break;
 		case RcvMsgFlag::PASSWORD:
