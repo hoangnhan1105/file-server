@@ -1,0 +1,15 @@
+File Server
+FREQUENTLY ASKED QUESTIONS
+
+Q: The communication protocol between the clients and the server?
+A: (See the project's report)
+
+Q: How are the shared files stored and managed? (Where's the list of files? How to retrieve them?)
+A: 
+
+Q: For the Server, do the 2 streams, sending and receiving, share one common mutex or use separated ones.
+A: Separated, because the 2 streams are independent of each other.
+
+Q: In which cases/functions is the mutex utilized on the Server?
+A: For the sending stream, there are 5 cases (described in the code's comments).
+           For the receiving stream, only the file transfers from Client to Server need mutex.
